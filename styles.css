@@ -1,0 +1,202 @@
+:root {
+  --verde-escuro: #0f3d27;
+  --verde: #157a47;
+  --verde-claro: #a7ddab;
+  --dourado: #d4af37;
+  --claro: #f7f4e8;
+  --texto-suave: #dce9dc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--verde-escuro);
+  color: var(--claro);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--verde-claro);
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--dourado);
+}
+
+header {
+  border-bottom: 1px solid rgba(167, 221, 171, 0.35);
+}
+
+.cabecalho,
+main,
+.rodape {
+  width: min(960px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.cabecalho {
+  min-height: 104px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.logo {
+  display: block;
+  width: auto;
+  height: 72px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+nav a {
+  font-weight: 700;
+  text-underline-offset: 0.25rem;
+}
+
+main {
+  padding: 4.5rem 0;
+}
+
+section + section {
+  margin-top: 5rem;
+}
+
+.hero {
+  max-width: 760px;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--claro);
+  line-height: 1.15;
+}
+
+h1 {
+  max-width: 720px;
+  margin: 0;
+  font-size: clamp(2.25rem, 6vw, 4.5rem);
+}
+
+h2 {
+  margin: 0 0 1.5rem;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+.hero p {
+  max-width: 680px;
+  margin: 1.5rem 0 2rem;
+  color: var(--texto-suave);
+  font-size: 1.125rem;
+}
+
+.botao {
+  display: inline-block;
+  padding: 0.85rem 1.25rem;
+  border: 2px solid var(--dourado);
+  border-radius: 0.35rem;
+  background: var(--dourado);
+  color: #132217;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.botao:hover,
+.botao:focus-visible {
+  background: transparent;
+  color: var(--dourado);
+}
+
+.cartoes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.cartao {
+  padding: 1.5rem;
+  border: 1px solid rgba(167, 221, 171, 0.45);
+  border-radius: 0.5rem;
+  background: #12452d;
+}
+
+.cartao h3 {
+  margin: 0 0 0.75rem;
+  color: var(--dourado);
+  font-size: 1.25rem;
+}
+
+.cartao p,
+.contato p {
+  margin: 0;
+  color: var(--texto-suave);
+}
+
+.contato {
+  display: grid;
+  gap: 1rem;
+  max-width: 720px;
+}
+
+.contato strong {
+  color: var(--verde-claro);
+}
+
+footer {
+  border-top: 1px solid rgba(167, 221, 171, 0.35);
+}
+
+.rodape {
+  padding: 2rem 0;
+  color: var(--texto-suave);
+}
+
+.rodape p {
+  margin: 0 0 0.5rem;
+}
+
+.prosa {
+  max-width: 720px;
+  line-height: 1.7;
+}
+
+.prosa h1 {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+}
+
+@media (max-width: 600px) {
+  .cabecalho {
+    min-height: auto;
+    padding: 1rem 0;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .cartoes {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    padding: 3.25rem 0;
+  }
+
+  section + section {
+    margin-top: 3.5rem;
+  }
+}
