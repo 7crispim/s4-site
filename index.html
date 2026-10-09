@@ -22,12 +22,13 @@
     .selo { margin: 0; padding: 8px 16px; border: 1px solid rgba(233,196,106,.5); border-radius: 99px; background: rgba(7,11,29,.85); color: #E9C46A; font-size: 12px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; }
     h1 { margin: 0; font-family: "Playfair Display", serif; font-size: clamp(26px, 4.4vw, 44px); font-style: italic; font-weight: 700; line-height: 1.22; }
     h1 span { display: block; color: #E9C46A; font-family: "Great Vibes", cursive; font-size: clamp(56px, 11vw, 110px); font-style: normal; font-weight: 400; line-height: 1.1; text-shadow: 0 0 28px rgba(233,196,106,.45); }
-    .sub { max-width: 38ch; margin: 0; color: #A9B0C8; font-size: clamp(15px, 2vw, 18px); font-weight: 400; line-height: 1.6; }
+    .ct::before { content: ""; position: absolute; z-index: -1; inset: -40px -90px 40px; background: radial-gradient(ellipse at center, rgba(7,11,29,.86) 0%, rgba(7,11,29,.72) 45%, rgba(7,11,29,0) 72%); pointer-events: none; }
+    .sub { max-width: 38ch; margin: 0; color: #E4E7F0; text-shadow: 0 1px 12px rgba(7,11,29,.9); font-size: clamp(15px, 2vw, 18px); font-weight: 400; line-height: 1.6; }
     .zap { display: inline-flex; min-height: 54px; align-items: center; gap: 10px; padding: 0 28px; border-radius: 999px; background: linear-gradient(135deg, #F5DFA0, #E9C46A 55%, #C9A24A); box-shadow: 0 10px 30px rgba(233,196,106,.25); color: #070B1D; font-size: 16px; font-weight: 600; text-decoration: none; pointer-events: auto; transition: transform .2s ease, box-shadow .2s ease; }
     .zap:hover { transform: translateY(-2px); box-shadow: 0 14px 38px rgba(233,196,106,.42); }
     .zap:focus-visible, .rod a:focus-visible, .tel a:focus-visible { outline: 2px solid #F5DFA0; outline-offset: 4px; }
     .zap svg { width: 22px; height: 22px; fill: currentColor; }
-    .tel { margin: 0; color: #F4F1E8; font-size: 14px; font-weight: 500; opacity: .8; }
+    .tel { margin: 0; color: #F4F1E8; font-size: 14px; font-weight: 500; text-shadow: 0 1px 10px rgba(7,11,29,.9); }
     .tel a, .rod a { color: inherit; pointer-events: auto; }
     .rod { position: absolute; right: 0; bottom: 0; left: 0; z-index: 2; padding: 0 16px calc(18px + env(safe-area-inset-bottom, 0px)); color: rgba(169,176,200,.7); font-size: 11px; font-weight: 500; letter-spacing: .08em; line-height: 1.6; text-align: center; }
     @media (max-width: 460px) { .ct { gap: 17px; padding-right: 18px; padding-left: 18px; } .zap { padding: 0 20px; font-size: 14px; } }
